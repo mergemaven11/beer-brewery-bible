@@ -16,6 +16,7 @@
 .DS_Store
 .history
 .vscode
+.eslintcache
 .env.local
 .env.development.local
 .env.test.local

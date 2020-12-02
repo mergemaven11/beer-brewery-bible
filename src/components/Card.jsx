@@ -47,7 +47,7 @@ function BeerCard(props) {
             <p>
               {beer.city}, {beer.state} {beer.postal_code}
             </p>
-            <a href={beer.website_url} target="_blank"> Website </a>
+            <a href={beer.website_url} target="_blank" rel="noreferrer"> Website </a>
           </Card>
         );
       })}

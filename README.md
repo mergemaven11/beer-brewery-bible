@@ -4,8 +4,7 @@ Description:
 
 > Beer Brewery Bible is a website that list breweries in each state.
 
-<!-- ![Beer Brewery Bible](brewerySite.png) -->
-![ScreenShot](/public/brewerySite.png)
+![Beer Brewery bible website](/public/brewerySite.png)
 
 ## Visit Webite
 

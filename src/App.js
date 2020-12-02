@@ -32,6 +32,10 @@ const styles = {
     fontFamily: 'Arial, cursive',
     fontSize: 14,
   },
+  disc: {
+    textAlign: 'center',
+    color: '#f3cf7a',
+  },
 };
 
 function App() {
@@ -58,6 +62,10 @@ function App() {
   return (
     <div style={global}>
       <h1 style={styles.title}>Beer Brewery Bible</h1>
+      <p style={styles.disc}>
+        Disclosure: Some of the websites may no longer be available or
+        incorrect. Data is updated and maintained through OpenBreweryDB API.
+      </p>
       <p style={styles.desc}>
         {' '}
         Instructions: Select a state from the dropdown for a list of beer

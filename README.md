@@ -8,10 +8,11 @@ Description:
 
 ## Visit Webite
 
-[Link to site](https://github.com/Tobias2023/beer-brewery-bible)
+[Link to site](https://beerbrewerybible.netlify.app/)
 
 ## Technologies used
 
 - [React](https://reactjs.org/docs/getting-started.html)
 - [Material-UI](https://material-ui.com/)
 - [OpenBreweryDB API](https://www.openbrewerydb.org/)
+- [Netlify](https://www.netlify.com/)

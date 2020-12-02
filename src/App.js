@@ -50,7 +50,7 @@ function App() {
       <h1 style={styles.title}>Beer Brewery Bible</h1>
       <Search />
       <Grid container direction='row' justify='center' alignItems='center'>
-        <BeerCard beer={data} />
+        <BeerCard beer={data} state={state} stateSet={setState} />
       </Grid>
     </div>
   );

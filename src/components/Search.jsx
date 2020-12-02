@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Search() {
   const classes = useStyles();
-  const [state, setState] = useState('');
 
   const handleChange = (event) => {
     setState(event.target.value);

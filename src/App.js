@@ -26,6 +26,12 @@ const styles = {
     fontSize: 42,
     fontFamily: 'Love Ya Like A Sister, cursive',
   },
+  desc: {
+    textAlign: 'center',
+    color: '#ffff',
+    fontFamily: 'Arial, cursive',
+    fontSize: 14
+  }
 };
 
 function App() {
@@ -54,6 +60,7 @@ function App() {
   return (
     <div style={global}>
       <h1 style={styles.title}>Beer Brewery Bible</h1>
+      <p style={styles.desc}> Instructions: Select a state from the dropdown for a list of beer breweries!</p>
       <Search state={state} stateSet={handleSelect}/>
       <Grid container direction='row' justify='center' alignItems='center'>
         <BeerCard beer={data} />

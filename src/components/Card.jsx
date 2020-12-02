@@ -28,7 +28,6 @@ function BeerCard(props) {
   const beerLst = props.beer;
   const classes = useStyles();
 
-  console.log(beerLst[0]);
 
   return (
     <div>

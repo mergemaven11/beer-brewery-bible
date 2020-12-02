@@ -30,8 +30,14 @@ const styles = {
 
 function App() {
   const [data, setData] = useState([]);
-  const [state, setState] = useState('Ohio');
+  const [state, setState] = useState('');
   const [isLoading, setIsLoading] = useState(true);
+
+  const handleSelect = (event) => {
+    setState(event.target.value);
+  };
+
+
 
   useEffect(() => {
     fetch(`https://api.openbrewerydb.org/breweries?by_state=${state}`, {
@@ -43,14 +49,14 @@ function App() {
         setIsLoading(false);
       })
       .catch((e) => console.log(e));
-  }, []);
+  }, [state]);
 
   return (
     <div style={global}>
       <h1 style={styles.title}>Beer Brewery Bible</h1>
-      <Search />
+      <Search state={state} stateSet={handleSelect}/>
       <Grid container direction='row' justify='center' alignItems='center'>
-        <BeerCard beer={data} state={state} stateSet={setState} />
+        <BeerCard beer={data} />
       </Grid>
     </div>
   );

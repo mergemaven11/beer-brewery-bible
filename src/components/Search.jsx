@@ -6,6 +6,8 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
+import { listOfStates } from './States';
+
 const useStyles = makeStyles((theme) => ({
   container: {
     justifyItem: 'center',
@@ -19,12 +21,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Search() {
+function Search(props) {
   const classes = useStyles();
-
-  const handleChange = (event) => {
-    setState(event.target.value);
-  };
+  const state = props.state;
 
   return (
     <div className={classes.container}>
@@ -34,14 +33,17 @@ function Search() {
           labelId='demo-simple-select-filled-label'
           id='demo-simple-select-filled'
           value={state}
-          onChange={handleChange}
+          onChange={props.stateSet}
         >
           <MenuItem value=''>
             <em>None</em>
           </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+
+          {listOfStates.map((state ) => (
+            <MenuItem onClick={props.stateSet} key={state} value={state}>
+              {state}
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
     </div>

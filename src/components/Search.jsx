@@ -39,7 +39,7 @@ function Search(props) {
             <em>None</em>
           </MenuItem>
 
-          {listOfStates.map((state ) => (
+          {listOfStates.map((state) => (
             <MenuItem onClick={props.stateSet} key={state} value={state}>
               {state}
             </MenuItem>

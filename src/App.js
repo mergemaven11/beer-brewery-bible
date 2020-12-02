@@ -30,8 +30,8 @@ const styles = {
     textAlign: 'center',
     color: '#ffff',
     fontFamily: 'Arial, cursive',
-    fontSize: 14
-  }
+    fontSize: 14,
+  },
 };
 
 function App() {
@@ -42,8 +42,6 @@ function App() {
   const handleSelect = (event) => {
     setState(event.target.value);
   };
-
-
 
   useEffect(() => {
     fetch(`https://api.openbrewerydb.org/breweries?by_state=${state}`, {
@@ -60,8 +58,12 @@ function App() {
   return (
     <div style={global}>
       <h1 style={styles.title}>Beer Brewery Bible</h1>
-      <p style={styles.desc}> Instructions: Select a state from the dropdown for a list of beer breweries!</p>
-      <Search state={state} stateSet={handleSelect}/>
+      <p style={styles.desc}>
+        {' '}
+        Instructions: Select a state from the dropdown for a list of beer
+        breweries!
+      </p>
+      <Search state={state} stateSet={handleSelect} />
       <Grid container direction='row' justify='center' alignItems='center'>
         <BeerCard beer={data} />
       </Grid>

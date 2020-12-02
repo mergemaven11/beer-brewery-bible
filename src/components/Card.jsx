@@ -17,7 +17,9 @@ const useStyles = makeStyles({
     transform: 'scale(0.8)',
   },
   title: {
-    fontSize: 14,
+    fontSize: 22,
+    textAlign: 'center',
+    fontFamily: 'Cabin Sketch family, cursive',
   },
   pos: {
     marginBottom: 12,
@@ -28,6 +30,7 @@ function BeerCard(props) {
   const beerLst = props.beer;
   const classes = useStyles();
 
+  console.log(beerLst[0])
 
   return (
     <div>
@@ -37,12 +40,14 @@ function BeerCard(props) {
             <h3 className={classes.title}>{beer.name}</h3>
             <hr />
 
-            <p>Brewery Type: {beer.brewery_type}</p>
-            <p>Ph# - {beer.phone}</p>
+            <p>Brewery Type - {beer.brewery_type}</p>
+            <p>Ph#: {beer.phone}</p>
+            <p> Address: </p>
+            <p> {beer.street} </p>
             <p>
-              {' '}
-              Address: {beer.street} {beer.city}, {beer.state} {beer.country}{' '}
+              {beer.city}, {beer.state} {beer.postal_code}
             </p>
+            <a href={beer.website_url} target="_blank"> Website </a>
           </Card>
         );
       })}

@@ -9,8 +9,15 @@ const useStyles = makeStyles({
     margin: '0.6em',
     backgroundColor: '#f3cf7a',
     color: '#6e3b3b',
-  }
-  
+  },
+  title: {
+    fontSize: 18,
+    textAlign: 'center',
+    fontFamily: 'Cabin Sketch family, cursive',
+  },
+  pos: {
+    marginBottom: 12,
+  },
 });
 
 function BeerCard(props) {

@@ -9,14 +9,12 @@ import Search from './components/Search';
 
 const styles = {
   content: {
-    backgroundColor: 'black',
     display: 'flex',
-    marginTop: 120,
-    marginLeft: 20,
-    marginRight: 20,
-    position: 'relative',
-    height: 700,
-    padding: 10,
+    margin:'0',
+    padding: ' 0',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    flexWrap: 'wrap'
   },
   title: {
     color: '#f3cf7a',
@@ -72,9 +70,9 @@ function App() {
         breweries!
       </p>
       <Search state={state} stateSet={handleSelect} />
-      <Grid container direction='row' justify='center' alignItems='center'>
+      <div style={styles.content}>
         <BeerCard beer={data} />
-      </Grid>
+      </div>
     </div>
   );
 }

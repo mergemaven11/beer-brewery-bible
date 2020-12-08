@@ -9,7 +9,8 @@ import { listOfStates } from './States';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    justifyItem: 'center',
+    display: 'flex',
+    justifyContent: 'center',
   },
   formControl: {
     margin: theme.spacing(1),

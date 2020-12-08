@@ -5,25 +5,12 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 75,
-    padding: 15,
-    margin: 15,
+    padding: '1em',
+    margin: '0.6em',
     backgroundColor: '#f3cf7a',
     color: '#6e3b3b',
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 22,
-    textAlign: 'center',
-    fontFamily: 'Cabin Sketch family, cursive',
-  },
-  pos: {
-    marginBottom: 12,
-  },
+  }
+  
 });
 
 function BeerCard(props) {
@@ -33,7 +20,7 @@ function BeerCard(props) {
   console.log(beerLst[0]);
 
   return (
-    <div>
+    <>
       {beerLst.map((beer) => {
         return (
           <Card key={beer.id} className={classes.root}>
@@ -54,7 +41,7 @@ function BeerCard(props) {
           </Card>
         );
       })}
-    </div>
+    </>
   );
 }
 

@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
   },
   formControl: {
     margin: theme.spacing(1),
-    minWidth: 120,
+    minWidth: 280,
+    backgroundColor: '#F3CF7A',
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -35,10 +36,6 @@ function Search(props) {
           value={state}
           onChange={props.stateSet}
         >
-          <MenuItem value=''>
-            <em>None</em>
-          </MenuItem>
-
           {listOfStates.map((state) => (
             <MenuItem onClick={props.stateSet} key={state} value={state}>
               {state}

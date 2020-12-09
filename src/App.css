@@ -1,1 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Cabin+Sketch&family=Love+Ya+Like+A+Sister&display=swap');
+
+
+/* Loading indicator */
+.full-page-loader {
+	position: absolute;
+	top: 0;
+	left:0;
+	background-color: #ffff;
+	width: 100vh;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { global } from './components/globalStyle';
 import BeerCard from './components/Card';
 import Search from './components/Search';
+
+import ClipLoader from 'react-spinners/ClipLoader';
 
 const styles = {
   content: {
@@ -18,8 +19,9 @@ const styles = {
     color: '#f3cf7a',
     textAlign: 'center',
     marginTop: 0,
+    marginBottom: 0,
     padding: 20,
-    fontSize: 42,
+    fontSize: 52,
     fontFamily: 'Love Ya Like A Sister, cursive',
   },
   desc: {
@@ -32,6 +34,11 @@ const styles = {
     textAlign: 'center',
     color: '#f3cf7a',
   },
+  imgContainer: {
+    img: { height: 300, width: 'auto' },
+    display: 'flex',
+    justifyContent: 'center',
+  },
 };
 
 function App() {
@@ -42,6 +49,12 @@ function App() {
   const handleSelect = (event) => {
     setState(event.target.value);
   };
+
+  if (isLoading) {
+    <div className='full-page-loader'>
+      <ClipLoader sizeUnit={'px'} size={150} color={'#fc1303'} loading={true} />
+    </div>;
+  }
 
   useEffect(() => {
     fetch(`https://api.openbrewerydb.org/breweries?by_state=${state}`, {
@@ -58,6 +71,9 @@ function App() {
   return (
     <div style={global}>
       <h1 style={styles.title}>Beer Brewery Bible</h1>
+      <div style={styles.imgContainer}>
+        <img src='/beerImg.png' alt='Beer' style={styles.imgContainer.img}/>
+      </div>
       <p style={styles.disc}>
         Disclosure: Some of the websites may no longer be available or
         incorrect. Data is updated and maintained through OpenBreweryDB API.

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Grid from '@material-ui/core/Grid';
-
 import { global } from './components/globalStyle';
 import BeerCard from './components/Card';
 import Search from './components/Search';
@@ -10,11 +8,11 @@ import Search from './components/Search';
 const styles = {
   content: {
     display: 'flex',
-    margin:'0',
+    margin: '0',
     padding: ' 0',
     flexDirection: 'row',
     justifyContent: 'center',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   title: {
     color: '#f3cf7a',

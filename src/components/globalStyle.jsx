@@ -1,3 +1,3 @@
 export const global = {
-  backgroundColor: '#ac3f21',
+  // backgroundColor: '#ac3f21',
 };

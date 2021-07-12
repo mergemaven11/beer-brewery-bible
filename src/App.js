@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { global } from './components/globalStyle';
-import BeerCard from './components/Card';
+import BeerCard from './components/BeerCard';
 import Search from './components/Search';
 
 import ClipLoader from 'react-spinners/ClipLoader';
@@ -9,14 +9,17 @@ import ClipLoader from 'react-spinners/ClipLoader';
 const styles = {
   content: {
     display: 'flex',
-    margin: '0',
-    padding: ' 0',
+    margin: '10px',
+    backgroundColor: '#ffff',
+    padding: '10px',
     flexDirection: 'row',
     justifyContent: 'center',
     flexWrap: 'wrap',
+    marginTop: '0px',
+
   },
   title: {
-    color: '#f3cf7a',
+    color: '#ac3f21',
     textAlign: 'center',
     marginTop: 0,
     marginBottom: 0,
@@ -84,7 +87,9 @@ function App() {
         breweries!
       </p>
       <Search state={state} stateSet={handleSelect} />
+
       <div style={styles.content}>
+
         <BeerCard beer={data} />
       </div>
     </div>
